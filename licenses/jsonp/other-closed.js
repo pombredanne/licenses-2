@@ -4,12 +4,11 @@ license_callback({
   "domain_software": false, 
   "family": "", 
   "id": "other-closed", 
-  "is_generic": true,
-  "is_okd_compliant": false, 
-  "is_osi_compliant": false, 
+  "is_generic": true, 
+  "od_conformance": "not reviewed", 
+  "osd_conformance": "not reviewed", 
   "maintainer": "", 
   "status": "active", 
   "title": "Other (Not Open)", 
   "url": ""
-}
-);
+});

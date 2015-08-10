@@ -11,7 +11,7 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
 
-  <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
   <style type="text/css">
     html, body {
       background-color: #eee;
@@ -66,7 +66,7 @@
       padding-right: 3px;
     }
   </style>
-  <link rel="stylesheet" href="http://twitter.github.com/bootstrap/assets/css/bootstrap-responsive.css">
+  <link rel="stylesheet" href="css/bootstrap-responsive.min.css">
 </head>
 <body>
 <div class="navbar navbar-fixed-top">
@@ -121,14 +121,14 @@
       <h3 id="format">Format</h3>
       <p>JSON hashes with the following keys:</p>
       <pre>{
-  "id": "odc-by", 
+  "id": "ODC-BY-1.0", 
   "domain_content": false, 
   "domain_data": true, 
   "domain_software": false, 
-  "is_okd_compliant": true, 
-  "is_osi_compliant": false, 
+  "od_conformance": "approved", 
+  "osd_conformance": "not reviewed", 
   "status": "active", 
-  "title": "Open Data Commons Attribution License", 
+  "title": "Open Data Commons Attribution License 1.0", 
   "url": "http://opendatacommons.org/licenses/by"
 }</pre>
       <p>Spot an error, think we should have more info? Please file an <a href="http://github.com/okfn/licenses/issues">issue</a> or submit a patch.
@@ -147,7 +147,7 @@
       <p><code>curl http://licenses.opendefinition.org/licenses/odc-by.json</code></p>
 
       <p>And here's how to use curl to access the CKAN license group:</p>
-      <p><code>curl http://licenses.opendefinition.org/licenses/group/ckan.json</code></p>
+      <p><code>curl http://licenses.opendefinition.org/licenses/groups/ckan.json</code></p>
 
       <h3>Git Access</h3>
       <p>You can also get the material as a git repo:</p>
@@ -165,7 +165,7 @@
       For example from jQuery:</p>
       <pre>
 $.ajax({
-  url:'http://licenses.opendefinition.org/groups/jsonp/odc-by.js',
+  url:'http://licenses.opendefinition.org/groups/jsonp/ODC-BY-1.0.js',
   dataType: 'jsonp',
   // you *must* set the callback function to be licenses_callback
   jsonpCallback: 'license_callback',
@@ -188,12 +188,12 @@ $.ajax({
       <input type="text" name="q" placeholder="Filter" class="search-query span5" />
       <br />
       <label class="checkbox">
-        <input type="checkbox" name="is_od_compliant" value="true" checked="" />
-        Is Open Definition Compliant
+        <input type="checkbox" name="od_conformance" value="approved" checked="" />
+        Approved as conforming to the Open Definition
       </label>
       <label class="checkbox">
-        <input type="checkbox" name="is_osi_compliant" value="true" />
-        Is Open Source Compliant
+        <input type="checkbox" name="osd_conformance" value="approved" />
+        Approved as conforming to the Open Source Definition
       </label>
     </form>
   </h2>

@@ -4,10 +4,10 @@
   "domain_software": true, 
   "family": "", 
   "id": "mitre", 
-  "is_okd_compliant": false, 
-  "is_osi_compliant": true, 
+  "od_conformance": "not reviewed", 
+  "osd_conformance": "approved", 
   "maintainer": "", 
   "status": "active", 
   "title": "MITRE Collaborative Virtual Workspace License (CVW License)", 
-  "url": ""
+  "url": "http://opensource.org/licenses/CVW"
 }
